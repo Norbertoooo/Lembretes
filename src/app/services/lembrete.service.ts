@@ -9,31 +9,30 @@ import { environment } from 'src/environments/environment';
 })
 export class LembreteService {
 
-  constructor(private httpClient: HttpClient) { }   
-  
-  listarLembretes(): Observable<Lembrete[]>{
+  constructor(private httpClient: HttpClient) { }
+
+  listarLembretes(): Observable<Lembrete[]> {
     const url = `${environment.lembreteApiUrl}/lembrete`;
     return this.httpClient.get<Lembrete[]>(url);
   }
 
-  listarLembretePorId(id:number): Observable<Lembrete>{
+  listarLembretePorId(id: number): Observable<Lembrete> {
     const url = `${environment.lembreteApiUrl}/lembrete/${id}`;
     return this.httpClient.get<Lembrete>(url);
   }
 
-  adicionarLembrete(lembrete: Lembrete): Observable<Lembrete>{
+  adicionarLembrete(lembrete: Lembrete): Observable<Lembrete> {
     const url = `${environment.lembreteApiUrl}/lembrete`;
     return this.httpClient.post<Lembrete>(url, lembrete);
   }
 
-  atulizarLembrete(lembrete: Lembrete): Observable<Lembrete>{
+  atulizarLembrete(lembrete: Lembrete): Observable<Lembrete> {
     const url = `${environment.lembreteApiUrl}/lembrete/${lembrete.id}`;
     return this.httpClient.put<Lembrete>(url, lembrete);
   }
 
-  deletarLembrete(id: number): Observable<Lembrete>{
+  deletarLembrete(id: number): Observable<Lembrete> {
     const url = `${environment.lembreteApiUrl}/lembrete/${id}`;
     return this.httpClient.delete<Lembrete>(url);
   }
-  
 }

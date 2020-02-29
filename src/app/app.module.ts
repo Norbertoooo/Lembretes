@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component';
+import { ListaLembreteComponent } from './paginas/lista-lembrete/lista-lembrete.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorMsgComponent,
+    ListaLembreteComponent
   ],
   imports: [
     BrowserModule,
