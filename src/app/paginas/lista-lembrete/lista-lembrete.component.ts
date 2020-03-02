@@ -29,6 +29,7 @@ export class ListaLembreteComponent implements OnInit {
   deletaLembrete( id: number) {
     this.lembreteService.deletarLembrete(id)
       .subscribe(() => {
+        alert('Lembrete deletado com sucesso');
         this.getListaLembretes();
       }, () => {this.errorMsgComponent.setError('falha ao deletar de lembrete: {}' + id); });
   }

@@ -22,11 +22,11 @@ export class LembreteService {
   }
 
   adicionarLembrete(lembrete: Lembrete): Observable<Lembrete> {
-    const url = `${environment.lembreteApiUrl}/lembrete`;
+    const url = `${environment.lembreteApiUrl}/lembrete/`;
     return this.httpClient.post<Lembrete>(url, lembrete);
   }
 
-  atulizarLembrete(lembrete: Lembrete): Observable<Lembrete> {
+  atualizarLembrete(lembrete: Lembrete): Observable<Lembrete> {
     const url = `${environment.lembreteApiUrl}/lembrete/${lembrete.id}`;
     return this.httpClient.put<Lembrete>(url, lembrete);
   }
