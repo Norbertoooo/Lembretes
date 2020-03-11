@@ -8,7 +8,7 @@ import {Lembrete} from '../../interfaces/lembrete';
 })
 export class FormLembreteComponent implements OnInit {
 
-  @Input() lembrete: Lembrete;
+  @Input() lembrete: Lembrete = {} as Lembrete;
   @Output() saidaLembrete: EventEmitter<Lembrete> = new EventEmitter<Lembrete>();
   constructor() { }
 
